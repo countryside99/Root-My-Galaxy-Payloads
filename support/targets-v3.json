@@ -1054,6 +1054,59 @@
         "sha256": "6eb54ab710b6a6e3e6f5b15d64d473ad42aca2c2efa4ab8d4fde2d97cccd6b23",
         "version": "4.2.0-rc3"
       }
+    },
+    {
+      "payloadId": "pa3q-S938BXXUDDZJB-cve-2026-98260-ksu",
+      "displayName": "Galaxy S25 Ultra | S938BXXUDDZJB | CVE-2026-98260 | KernelSU 3.3.0",
+      "models": ["SM-S938B"],
+      "kernelVersions": ["6.6.127-android15-8-p87b1ce1-abogkiS938BXXUDDZJB-4k"],
+      "exploit": {
+        "url": "https://raw.githubusercontent.com/countryside99/Root-My-Galaxy-Payloads/main/artifacts/pa3q-S938BXXUDDZJB/cve-2026-98260-app.so",
+        "size": 4529248,
+        "sha256": "2d5ba27a61c52723147e3a4b4280a3d81b36cdefaf8394c14b59957d83830b63"
+      },
+      "kernelsu": {
+        "url": "https://raw.githubusercontent.com/rushiranpise/Root-My-Galaxy-Payloads/main/kernelsu/ksud-pa3q-S938BXXUDDZJB-kdp",
+        "size": 5093048,
+        "sha256": "835f4fd7711214696b33ac0c2ebe68a482f62cfd1e03a4e320b412a5b81a1f33",
+        "version": "3.3.0"
+      }
+    },
+    {
+      "payloadId": "pa3q-S938BXXUDDZJB-cve-2026-98260-ksun",
+      "displayName": "Galaxy S25 Ultra | S938BXXUDDZJB | CVE-2026-98260 | KernelSU-Next 3.4.2",
+      "models": ["SM-S938B"],
+      "kernelVersions": ["6.6.127-android15-8-p87b1ce1-abogkiS938BXXUDDZJB-4k"],
+      "flavor": "kernelsu-next",
+      "exploit": {
+        "url": "https://raw.githubusercontent.com/countryside99/Root-My-Galaxy-Payloads/main/artifacts/pa3q-S938BXXUDDZJB/cve-2026-98260-app.so",
+        "size": 4529248,
+        "sha256": "2d5ba27a61c52723147e3a4b4280a3d81b36cdefaf8394c14b59957d83830b63"
+      },
+      "kernelsu": {
+        "url": "https://raw.githubusercontent.com/rushiranpise/Root-My-Galaxy-Payloads/main/kernelsu/ksud-next-pa3q-S938BXXUDDZJB-kdp",
+        "size": 4279896,
+        "sha256": "92d0359f0f49945ee1dd19bba95e6bc9f3e36fc717b3b90f0c4199376885a8d9",
+        "version": "3.4.2"
+      }
+    },
+    {
+      "payloadId": "pa3q-S938BXXUDDZJB-cve-2026-98260-rsksu",
+      "displayName": "Galaxy S25 Ultra | S938BXXUDDZJB | CVE-2026-98260 | BakaSU 4.2.0-rc3",
+      "models": ["SM-S938B"],
+      "kernelVersions": ["6.6.127-android15-8-p87b1ce1-abogkiS938BXXUDDZJB-4k"],
+      "flavor": "resukisu",
+      "exploit": {
+        "url": "https://raw.githubusercontent.com/countryside99/Root-My-Galaxy-Payloads/main/artifacts/pa3q-S938BXXUDDZJB/cve-2026-98260-app.so",
+        "size": 4529248,
+        "sha256": "2d5ba27a61c52723147e3a4b4280a3d81b36cdefaf8394c14b59957d83830b63"
+      },
+      "kernelsu": {
+        "url": "https://raw.githubusercontent.com/rushiranpise/Root-My-Galaxy-Payloads/main/kernelsu/ksud-rsksu-pa3q-S938BXXUDDZJB-kdp",
+        "size": 4376288,
+        "sha256": "6eb54ab710b6a6e3e6f5b15d64d473ad42aca2c2efa4ab8d4fde2d97cccd6b23",
+        "version": "4.2.0-rc3"
+      }
     }
   ]
 }
