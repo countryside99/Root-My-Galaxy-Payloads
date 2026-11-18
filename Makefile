@@ -68,6 +68,7 @@ APP_PUBLISH_RECIPES := \
   e3q-S928USQS6DZF2=stable \
   pa2q-S9360ZCSCCZG1=all \
   pa3q-S938U1UEUDDZJB=all \
+  pa3q-S938BXXUDDZJB=all \
   psq-S9370ZCS9CZG1=all \
   q7q-F966BXXSBBZG3=all \
   q7q-F966USQSBBZG3=all \
@@ -121,18 +122,18 @@ APP_RELEASE_OPT := -O2
 APP_RELEASE_LINK_FLAGS := -Wl,--gc-sections -Wl,--icf=all -s
 endif
 
-ifeq ($(TARGET),pa3q-S938U1UEUDDZJB)
+ifneq ($(filter pa3q-S938U1UEUDDZJB pa3q-S938BXXUDDZJB,$(TARGET)),)
 # The DDZJB chain is SamTimer's verified standalone timer exploit.  It stays a
 # separate executable because it re-execs /proc/self/exe; the app payload is a
 # supervisor that embeds it (and uhexec) and stages both at run time.
-TIMER_SRC := src/targets/pa3q-S938U1UEUDDZJB/cve98260/timer.c
+TIMER_SRC := src/targets/$(TARGET)/cve98260/timer.c
 TIMER_BIN := $(OUTDIR)/cve-2026-98260-timer
-UHEXEC_BIN := src/targets/pa3q-S938U1UEUDDZJB/cve98260/uhexec
+UHEXEC_BIN := src/targets/$(TARGET)/cve98260/uhexec
 TIMER_BLOB := $(OUTDIR)/cve-2026-98260-timer-blob.S
 UHEXEC_BLOB := $(OUTDIR)/cve-2026-98260-uhexec-blob.S
 TARGET_CFLAGS += -Isrc/targets/$(TARGET) -Isrc/targets/$(TARGET)/cve98260
 APP_PRELOAD_SRCS := \
-  src/targets/pa3q-S938U1UEUDDZJB/payload.c \
+  src/targets/$(TARGET)/payload.c \
   $(TIMER_BLOB) \
   $(UHEXEC_BLOB)
 PRELOAD_SRCS := $(APP_PRELOAD_SRCS)
